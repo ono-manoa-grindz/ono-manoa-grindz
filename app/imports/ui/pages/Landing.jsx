@@ -6,6 +6,15 @@ class Landing extends React.Component {
   render() {
     return (
         <div className='digits-landing-background'>
+          <Grid container stackable centered columns={1}>
+            <Grid.Column textAlign={'center'}>
+        <h1><br/>
+        <br/>
+        <br/>
+        We strive to satisfy UH Manoa students by providing choices of restaurants available on campus!<br/>
+        <br/><br/></h1>
+            </Grid.Column>
+          </Grid>
           <Grid container stackable centered columns={3}>
             <Grid.Column textAlign={'center'}>
           <Card>
