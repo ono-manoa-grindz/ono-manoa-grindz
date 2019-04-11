@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListVendors from '../pages/ListVendors';
+import DaSpot from '../pages/DaSpot';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddReview from '../pages/AddReview';
 import EditStuff from '../pages/EditStuff';
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListVendors}/>
               <ProtectedRoute path="/add" component={AddReview}/>
+              <ProtectedRoute path="/DaSpot" component={DaSpot}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
