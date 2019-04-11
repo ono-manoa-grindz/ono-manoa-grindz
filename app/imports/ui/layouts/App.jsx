@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListVendors from '../pages/ListVendors';
 import DaSpot from '../pages/DaSpot';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddReview from '../pages/AddReview';
+import AddVendorAdmin from '../pages/AddVendorAdmin';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -30,8 +30,8 @@ class App extends React.Component {
               <Route path="/list" component={ListVendors}/>
               <ProtectedRoute path="/add" component={AddReview}/>
               <ProtectedRoute path="/DaSpot" component={DaSpot}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
+              <AdminProtectedRoute path="/addvendor" component={AddVendorAdmin}/>
               <Route component={NotFound}/>
             </Switch>
             <Footer/>
