@@ -1,13 +1,181 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    {
+      "email": "admin@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "john@foo.com",
+      "password": "changeme"
+    }
   ],
-
   "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+    {
+      "name": "Basket",
+      "quantity": 3,
+      "owner": "john@foo.com",
+      "condition": "excellent"
+    },
+    {
+      "name": "Bicycle",
+      "quantity": 2,
+      "owner": "john@foo.com",
+      "condition": "poor"
+    },
+    {
+      "name": "Banana",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "good"
+    },
+    {
+      "name": "Boogie Board",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "excellent"
+    }
+  ],
+  "defaultVendors": [
+    {
+      "vendorName": "Da Spot",
+      "description": "Da Spot Health Foods & Juices offers diverse, healthy and affordable cuisine with a unique take on tasty dishes from around the world. Da Spot specializes in Mediterranean and North African food with vegan and specialty meat options that can be certified halal or kosher. Offering imaginative cuisine in exotic styles of Egyptian, Greek, French, Italian, Indian, Thai, Malaysian, Ethiopian, American, Hawaiian, Japanese, Chinese, Korean, Pacific Rim and fusion cooking. Da Spot's menu also features over 15 combinations of different fruit smoothies.",
+      "location": "Sustainability Courtyard & Saunders Hall (2 locations)",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_22.png",
+      "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Dunkin Donuts",
+      "description": "Dunkin’ Donuts in Paradise Palms Cafe will keep Hawaii running with high-quality beverage offerings–including freshly-brewed Hot and Iced Coffees–paired perfectly with delicious donuts, bakery good, sandwiches and more.",
+      "location": "Paradise Palms Café",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_57.png",
+      "hours": "Hours: Monday - Friday 7:00am - 5:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Govinda's",
+      "description": "Govinda's offers a 100% pure vegetarian menu, with items low in cholesterol and mostly organic. They strive to bring you a healthy and delicious meal at the best possible price. Govinda's uses top quality produce and only the finest quality sea salt. All of the rice, grains, beans, tofu, sugar and flour are certified organic. Their menu never contains any meat or meat by-products, fish, eggs, MSG, iodized salt, preservatives, hydrogenated oils, or artificial colors or flavors.",
+      "location": "Sustainability Courtyard & Saunders Hall (2 locations)",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_2004.png",
+      "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Holoholo Grill",
+      "description": "Holoholo Grill features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or ",
+      "location": "Paradise Palms Café",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_639.png",
+      "hours": "Hours: Monday - Friday 8:00am - 3:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Hot Tacos",
+      "description": "Hot Tacos offers authentic Mexican food, prepped and cooked daily from scratch offering tacos, burritos, and quesadillas with meat options like steak, chicken, marinated pork, and shredded beef. They offer a la carte options or lunch plates that include beans and Spanish rice and other add on options like Chili Rellenos and Tamales.",
+      "location": "Krauss Hall",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_2933.png",
+      "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Kamitoku Ramen",
+      "description": "Kamitoku Ramen specializes in a Tottori-style beef bone ramen.",
+      "location": "Center for Korean Studies (Monday, Wednesday, Friday), Holmes Hall (Tuesday, Thursday)",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_1880.png",
+      "hours": "Hours: Monday, Wednesday, Friday: 10:00am - 2:00pm (Center for Korean Studies), Tuesday, Thursday: 10:00am - 2:00pm (Holmes Hall)",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "L&L Hawaiian Barbecue",
+      "description": "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L's famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available.",
+      "location": "Athletic Complex, 2nd Floor & Paradise Palms Café (Two locations)",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_75.png",
+      "hours": "Hours: Monday - Friday 7:00am - 4:30pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Lasoon",
+      "description": "Lasoon offers something for everyone with their signature exotic South Indian and Malaysian cuisine. Daily specials include chicken curry, lamb masala, garlic shrimp, seafood curry, spinach tofu, spicy eggplant, curried potatoes, coconut cabbage & over 10 different vegetarian entrees to choose from. Spiciness ranges from mild to very hot.",
+      "location": "Paradise Palms Café",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_86.png",
+      "hours": "Hours: Monday - Friday 10:30am - 4:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Le Crêpe Café",
+      "description": "Le Crêpe Café makes traditional French crêpes, cooked to order in front of customers. They specialize in a flavorsome menu of sweet and savory crêpes and use fresh ingredients, organic when possible. Their utensils are even bio-compostable. Enjoy a crêpe any time of day, as a breakfast, snack, main course, or dessert - close your eyes and you're in Paris! Whether you’re needing a break from the law books or a pick-me-up as you’re headed to or off campus, you’ll also appreciate Le Crêpe Café’s French Roast and espresso drinks. ",
+      "location": "Richardson School of Law & Paradise Palms Café (2 locations)",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_266.png",
+      "hours": "Hours: Monday - Thursday: 8:00am - 5:30pm, Friday: 8:00am - 2:00pm (Law School), Monday - Friday: 8:00am - 5:00pm (Paradise Palms Café)",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Panda Express",
+      "description": "Panda Express serves gourmet Chinese food made with only the freshest ingredients. Famous for its Orange Chicken, they also offer a number of Wok Smart entrées that contain less than 250 calories per serving, such as Shanghai Angus Steak, Kung Pao Chicken, and Broccoli Beef. Other favorites include Beijing Beef, Sweetfire Chicken Breast, and Honey Walnut Shrimp. Panda Express’ offerings can be enjoyed in Panda Bowls, or two and three item plates. Perfect for lunch, dinner or as a pick-me-up snack between classes.",
+      "location": "Paradise Palms Café",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_581.png",
+      "hours": "Hours: Monday - Friday 10:30am - 4:30pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Peace Cafe",
+      "description": "All of their homestyle recipes, including their Green Garden Burger patties and sauces, are original. Green Garden's food concept is to offer plant-based, all-vegan, organic, natural, non-GMO, and healthy meals with no onion, garlic or other additives, therefore to preserve the original, clean and pure flavors of their food. They have gluten-free offerings daily and their 100% plant-based organic food is fresh, wholesome and delicious.",
+      "location": "Sustainability Courtyard",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_909.png",
+      "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Punchbowl",
+      "description": "Punchbowl Coffee is a new brand created to promote and sell coffee from the Ka’u region on the big island. We work directly with several growers and our goal is to assist them to grow their business while maintaining control of their quality and distribution.",
+      "location": "Post Building",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_1667.png",
+      "hours": "Hours: Monday - Friday 7:00am - 9:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "Sistah Truck",
+      "description": "Sistah Truck serves Korean-inspired local cuisine. Daily menu plate lunches include loco moco, chicken katsu, and Korean-style shoyu chicken. They also serve grab-and-go dishes like bibimbap, gyoza and kimchi bowls. Vegetarian options are available.",
+      "location": "Holmes Hall (Monday, Wednesday, Friday), Center for Korean Studies (Tuesday, Thursday)",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_1956.png",
+      "hours": "Hours: Monday, Wednesday, Friday: 10:00am - 2:00pm (Holmes Hall), Tuesday, Thursday: 10:00am - 2:00pm (Center for Korean Studies)",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "john@foo.com"
+    },
+    {
+      "vendorName": "The Bean Counter",
+      "description": "The Bean Counter serves up brewed coffee from the Hawaiian Islands and fulfills your caffeinated desires with a full service espresso bar. Feed your growling stomach with a dizzying array of bagels with homemade spreads, or chow down with our savory wraps, healthy salads and sweet treats.",
+      "location": "Shidler College of Business, 1st Floor",
+      "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_42.png",
+      "hours": "Hours: Monday - Thursday 7:30am - 6:00pm, Friday 7:30am - 4:00pm",
+      "menu": "Menu",
+      "rating": "Rating",
+      "owner": "admin@foo.com"
+    }
   ]
 }
