@@ -1,10 +1,35 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Button, Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { Roles } from 'meteor/alanning:roles';
+import { Meteor } from 'meteor/meteor';
+import { Bert } from 'meteor/themeteorchef:bert';
+import { Vendors } from '/imports/api/vendor/vendor';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Vendor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    const result = window.confirm('Do you really want to delete?');
+    if (result) {
+      Vendors.remove(this.props.vendor._id, this.deleteCallback);
+    }
+    return false;
+  }
+
+  deleteCallback(error) {
+    if (error) {
+      Bert.alert({ type: 'danger', message: `Delete failed: ${error.message}` });
+    } else {
+      Bert.alert({ type: 'success', message: 'Delete succeeded' });
+    }
+  }
+
   render() {
     return (
         <Card centered>
@@ -17,6 +42,15 @@ class Vendor extends React.Component {
             <Card.Description><a href="#">{this.props.vendor.menu}</a></Card.Description>
             <Card.Description>{this.props.vendor.rating}</Card.Description>
           </Card.Content>
+          {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+              <Card.Content extra activeClassName="active" exact to="/admin" key='admin'>
+                <Button basic color='green'>
+                  <Link to={`/edit/${this.props.vendor._id}`}>Edit</Link>
+                </Button>
+                <Button basic onClick={this.onClick} color='red'>Delete
+                </Button>
+              </Card.Content>
+          ) : ''}
         </Card>
     );
   }

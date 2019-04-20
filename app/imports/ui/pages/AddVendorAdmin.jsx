@@ -3,6 +3,7 @@ import { Vendors, VendorSchema } from '/imports/api/vendor/vendor';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
+import LongTextField from 'uniforms-semantic/LongTextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -32,9 +33,9 @@ class AddVendorAdmin extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { name, quantity, condition } = data;
+    const { vendorName, description, image, hours, location, menu, rating } = data;
     const owner = Meteor.user().username;
-    Vendors.insert({ name, quantity, condition, owner }, this.insertCallback);
+    Vendors.insert({ vendorName, description, image, hours, location, menu, rating, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -46,10 +47,12 @@ class AddVendorAdmin extends React.Component {
             <AutoForm ref={(ref) => { this.formRef = ref; }} schema={VendorSchema} onSubmit={this.submit}>
               <Segment>
                 <TextField name='vendorName'/>
+                <LongTextField name='description'/>
                 <TextField name='image'/>
                 <TextField name='hours'/>
                 <TextField name='location'/>
                 <TextField name='menu'/>
+                <TextField name='rating'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>
