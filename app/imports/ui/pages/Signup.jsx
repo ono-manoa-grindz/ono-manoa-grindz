@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Link, Redirect } from 'react-router-dom';
 import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
 
@@ -10,7 +11,7 @@ export default class Signup extends React.Component {
   /** Initialize state fields. */
   constructor(props) {
     super(props);
-    this.state = { email: '', password: '', error: '' };
+    this.state = { email: '', name: '', password: '', error: '' };
     // Ensure that 'this' is bound to this component in these two functions.
     // https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,27 +25,41 @@ export default class Signup extends React.Component {
 
   /** Handle Signup submission using Meteor's account mechanism. */
   handleSubmit() {
-    const { email, password } = this.state;
-    Accounts.createUser({ email, username: email, password }, (err) => {
+    const { email, name, password } = this.state;
+    Accounts.createUser({ email, username: name, password }, (err) => {
       if (err) {
         this.setState({ error: err.reason });
       } else {
-        // browserHistory.push('/login');
+        this.setState({ error: '', redirectToReferer: true });
       }
     });
   }
 
   /** Display the signup form. */
   render() {
+    const { from } = this.props.location.state || { from: { pathname: '/' } };
+    // if correct authentication, redirect to page instead of login screen
+    if (this.state.redirectToReferer) {
+      return <Redirect to={from}/>;
+    }
     return (
         <Container>
-          <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
+          <Grid textAlign="center" verticalAlign="middle" centered columns={3}>
             <Grid.Column>
               <Header as="h2" textAlign="center">
                 Register your account
               </Header>
               <Form onSubmit={this.handleSubmit}>
                 <Segment stacked>
+                  <Form.Input
+                      label="Name"
+                      icon="user"
+                      iconPosition="left"
+                      name="name"
+                      type="name"
+                      placeholder="Name"
+                      onChange={this.handleChange}
+                  />
                   <Form.Input
                       label="Email"
                       icon="user"
@@ -84,3 +99,8 @@ export default class Signup extends React.Component {
     );
   }
 }
+
+/** Ensure that the React Router location object is available in case we need to redirect. */
+Signup.propTypes = {
+  location: PropTypes.object,
+};

@@ -13,8 +13,13 @@ const VendorSchema = new SimpleSchema({
   image: String,
   hours: String,
   menu: String,
-  rating: String,
   owner: String,
+  type: [String],
+  rating: {
+    type: String,
+    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★'],
+    defaultValue: '★',
+  },
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
