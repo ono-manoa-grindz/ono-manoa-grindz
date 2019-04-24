@@ -14,11 +14,10 @@ const VendorSchema = new SimpleSchema({
   hours: String,
   menu: String,
   owner: String,
-  type: [String],
   rating: {
     type: String,
-    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★'],
-    defaultValue: '★',
+    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★', ' '],
+    defaultValue: ' ',
   },
 }, { tracker: Tracker });
 

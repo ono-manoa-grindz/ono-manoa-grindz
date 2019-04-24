@@ -10,6 +10,7 @@ import ErrorsField from 'uniforms-semantic/ErrorsField';
 import RadioField from 'uniforms-semantic/RadioField';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Meteor } from 'meteor/meteor';
+import SelectField from './AddReview';
 
 /** Renders the Page for adding a document. */
 class AddVendorAdmin extends React.Component {
@@ -53,7 +54,6 @@ class AddVendorAdmin extends React.Component {
                 <TextField name='hours'/>
                 <TextField name='location'/>
                 <TextField name='menu'/>
-                <TextField name='rating'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>
