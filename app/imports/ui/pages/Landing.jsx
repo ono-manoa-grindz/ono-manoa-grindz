@@ -7,7 +7,7 @@ class Landing extends React.Component {
 
   render() {
     return (
-        <div className='digits-landing-background'>
+        <div className='landing-background'>
           <Grid container stackable centered columns={1}>
             <Grid.Column textAlign={'center'}>
               <Grid.Row
