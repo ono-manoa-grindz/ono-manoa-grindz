@@ -52,15 +52,6 @@ export default class Signup extends React.Component {
               <Form onSubmit={this.handleSubmit}>
                 <Segment stacked>
                   <Form.Input
-                      label="Name"
-                      icon="user"
-                      iconPosition="left"
-                      name="name"
-                      type="name"
-                      placeholder="Name"
-                      onChange={this.handleChange}
-                  />
-                  <Form.Input
                       label="Email"
                       icon="user"
                       iconPosition="left"

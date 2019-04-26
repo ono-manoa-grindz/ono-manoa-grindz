@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListVendors from '../pages/ListVendors';
 import EditVendor from '../pages/EditVendor';
-import DaSpot from '../pages/DaSpot';
+import Vendor from '../components/Vendor';
 import AddReview from '../pages/AddReview';
 import AddVendorAdmin from '../pages/AddVendorAdmin';
 import NotFound from '../pages/NotFound';
@@ -30,9 +30,9 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListVendors}/>
               <ProtectedRoute path="/add" component={AddReview}/>
-              <ProtectedRoute path="/DaSpot" component={DaSpot}/>
-              <AdminProtectedRoute path="/edit/:_id" component={EditVendor}/>
+              <ProtectedRoute path="/" component={Vendor}/>
               <ProtectedRoute path="/signout" component={Signout}/>
+              <AdminProtectedRoute path="/edit/:_id" component={EditVendor}/>
               <AdminProtectedRoute path="/addvendor" component={AddVendorAdmin}/>
               <Route component={NotFound}/>
             </Switch>

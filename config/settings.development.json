@@ -1,13 +1,11 @@
 {
   "defaultAccounts": [
     {
-      "name": "Philip Johnson",
       "email": "admin@foo.com",
       "password": "changeme",
       "role": "admin"
     },
     {
-      "name": "John Foo",
       "email": "john@foo.com",
       "password": "changeme"
     }
