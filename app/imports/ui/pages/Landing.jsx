@@ -24,7 +24,7 @@ class Landing extends React.Component {
               <Card>
                 <Card.Content>
                   <Card.Header>L&L Hawaiian Barbecue</Card.Header>
-                  <Image floated='center' size='medium'
+                  <Image size='medium'
                          src='https://s3-media2.fl.yelpcdn.com/bphoto/9yZqa-ZIw7nmYKhxdW1_Zw/348s.jpg'/>
                   <Card.Description>
                     Great portions for the price and tastes great! <strong> -Jason Yim</strong>
@@ -43,7 +43,7 @@ class Landing extends React.Component {
               <Card>
                 <Card.Content>
                   <Card.Header>Dunkin Donuts</Card.Header>
-                  <Image floated='center' size='medium'
+                  <Image size='medium'
                          src='https://s3-media1.fl.yelpcdn.com/bphoto/Weh8K8nkw1fCIDicleZltA/348s.jpg'/>
                   <Card.Description>
                     Best place for a quick donut and coffee <strong> -Ken Tung</strong>
@@ -62,7 +62,7 @@ class Landing extends React.Component {
               <Card>
                 <Card.Content>
                   <Card.Header>Aja Sushi & Bento</Card.Header>
-                  <Image style={{ width: '100%', height: '265px' }} floated='center' size='medium'
+                  <Image style={{ width: '100%', height: '265px' }} size='medium'
                          src='https://s3-media1.fl.yelpcdn.com/bphoto/QLLIshiOpxYEBrJK5mlMCw/o.jpg'/>
                   <Card.Description>
                     Good stuff! <strong> -Philip Johnson</strong>

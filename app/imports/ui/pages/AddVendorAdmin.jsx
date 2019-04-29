@@ -7,10 +7,8 @@ import LongTextField from 'uniforms-semantic/LongTextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
-import RadioField from 'uniforms-semantic/RadioField';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Meteor } from 'meteor/meteor';
-import SelectField from './AddReview';
 
 /** Renders the Page for adding a document. */
 class AddVendorAdmin extends React.Component {
@@ -42,7 +40,9 @@ class AddVendorAdmin extends React.Component {
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   render() {
+    const divStyle = { paddingBottom: '25px' };
     return (
+        <Container style={divStyle}>
         <Grid container centered>
           <Grid.Column>
             <Header as="h2" textAlign="center">Add Vendor</Header>
@@ -61,6 +61,7 @@ class AddVendorAdmin extends React.Component {
             </AutoForm>
           </Grid.Column>
         </Grid>
+        </Container>
     );
   }
 }

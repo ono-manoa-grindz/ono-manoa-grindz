@@ -19,7 +19,7 @@
       "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "local" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Dunkin Donuts",
@@ -29,7 +29,8 @@
       "hours": "Hours: Monday - Friday 7:00am - 5:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "coffee", "fast food" ]
+      "rating": "★★★★"
+
     },
     {
       "vendorName": "Govinda's",
@@ -39,7 +40,7 @@
       "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "vegan", "healthy" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Holoholo Grill",
@@ -49,7 +50,7 @@
       "hours": "Hours: Monday - Friday 8:00am - 3:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "healthy" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Hot Tacos",
@@ -59,7 +60,7 @@
       "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "mexican" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Kamitoku Ramen",
@@ -69,7 +70,7 @@
       "hours": "Hours: Monday, Wednesday, Friday: 10:00am - 2:00pm (Center for Korean Studies), Tuesday, Thursday: 10:00am - 2:00pm (Holmes Hall)",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "japanese", "asian" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "L&L Hawaiian Barbecue",
@@ -79,7 +80,7 @@
       "hours": "Hours: Monday - Friday 7:00am - 4:30pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "local" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Lasoon",
@@ -89,7 +90,7 @@
       "hours": "Hours: Monday - Friday 10:30am - 4:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "indian" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Le Crêpe Café",
@@ -99,7 +100,7 @@
       "hours": "Hours: Monday - Thursday: 8:00am - 5:30pm, Friday: 8:00am - 2:00pm (Law School), Monday - Friday: 8:00am - 5:00pm (Paradise Palms Café)",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "crepe", "coffee" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Panda Express",
@@ -109,7 +110,7 @@
       "hours": "Hours: Monday - Friday 10:30am - 4:30pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "chinese", "fast food", "asian"]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Peace Cafe",
@@ -119,7 +120,7 @@
       "hours": "Hours: Monday - Friday 10:00am - 2:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "vegan", "healthy" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Punchbowl",
@@ -129,7 +130,7 @@
       "hours": "Hours: Monday - Friday 7:00am - 9:00pm",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "coffee", "sandwich" ]
+      "rating": "★★★★"
     },
     {
       "vendorName": "Sistah Truck",
@@ -139,7 +140,7 @@
       "hours": "Hours: Monday, Wednesday, Friday: 10:00am - 2:00pm (Holmes Hall), Tuesday, Thursday: 10:00am - 2:00pm (Center for Korean Studies)",
       "menu": "Menu",
       "owner": "john@foo.com",
-      "type": [ "local", "asian"]
+      "rating": "★★★★"
     },
     {
       "vendorName": "The Bean Counter",
@@ -149,7 +150,7 @@
       "hours": "Hours: Monday - Thursday 7:30am - 6:00pm, Friday 7:30am - 4:00pm",
       "menu": "Menu",
       "owner": "admin@foo.com",
-      "type": [ "coffee", "sandwich" ]
+      "rating": "★★★★"
     }
   ]
 }
