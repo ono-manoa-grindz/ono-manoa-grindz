@@ -1,6 +1,6 @@
 import React from 'react';
 import { Vendors, VendorSchema } from '/imports/api/vendor/vendor';
-import { Grid, Segment, Header } from 'semantic-ui-react';
+import { Grid, Segment, Header, Container } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
 import LongTextField from 'uniforms-semantic/LongTextField';
