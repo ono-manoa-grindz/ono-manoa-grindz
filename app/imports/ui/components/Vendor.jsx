@@ -37,7 +37,10 @@ class Vendor extends React.Component {
             <Image centered size='small' src={this.props.vendor.image}></Image>
           </Link>
           <Card.Content>
-            <Card.Header>{this.props.vendor.vendorName}</Card.Header>
+            <Card.Header>
+              <Link to={`/moreinfo/${this.props.vendor._id}`}>{this.props.vendor.vendorName}
+              </Link>
+            </Card.Header>
             <Card.Meta>{this.props.vendor.location}</Card.Meta>
             <Card.Description>{this.props.vendor.shortDescription}</Card.Description>
             <Card.Description>{this.props.vendor.rating}</Card.Description>
