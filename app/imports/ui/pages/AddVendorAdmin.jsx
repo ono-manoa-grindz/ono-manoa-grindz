@@ -49,6 +49,7 @@ class AddVendorAdmin extends React.Component {
             <AutoForm ref={(ref) => { this.formRef = ref; }} schema={VendorSchema} onSubmit={this.submit}>
               <Segment>
                 <TextField name='vendorName'/>
+                <LongTextField name='shortDescription'/>
                 <LongTextField name='description'/>
                 <TextField name='image'/>
                 <TextField name='hours'/>

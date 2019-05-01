@@ -1,18 +1,23 @@
 a:link {
-  color: black;
+  color: #FF2200;
 }
 
 a:visited {
-  color: black;
+  color: #FF2200;
 }
 
 a:hover {
-  color: gray !important;
+  color: #FF2200 !important;
 }
 
-body {
-  background-color: lightgray;
+em {
+  font-style: italic;
 }
+
+em:hover {
+  text-decoration: underline;
+}
+
 
 .main-text{
   color: white;

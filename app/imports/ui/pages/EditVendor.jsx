@@ -37,12 +37,12 @@ class EditVendor extends React.Component {
             <AutoForm schema={VendorSchema} onSubmit={this.submit} model={this.props.doc}>
               <Segment>
                 <TextField name='vendorName'/>
+                <LongTextField name='shortDescription'/>
                 <LongTextField name='description'/>
                 <TextField name='image'/>
                 <TextField name='hours'/>
                 <TextField name='location'/>
                 <TextField name='menu'/>
-                <TextField name='rating'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' />

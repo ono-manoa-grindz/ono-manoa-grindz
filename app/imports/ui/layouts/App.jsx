@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListVendors from '../pages/ListVendors';
 import EditVendor from '../pages/EditVendor';
-import Vendor from '../components/Vendor';
+import MoreInfo from '../pages/MoreInfo';
 import AddReview from '../pages/AddReview';
 import AddVendorAdmin from '../pages/AddVendorAdmin';
 import NotFound from '../pages/NotFound';
@@ -30,8 +30,9 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/list" component={ListVendors}/>
               <ProtectedRoute path="/add" component={AddReview}/>
-              <ProtectedRoute path="/signout" component={Signout}/>
+              <ProtectedRoute path="/moreinfo/:_id" component={MoreInfo}/>
               <AdminProtectedRoute path="/edit/:_id" component={EditVendor}/>
+              <ProtectedRoute path="/signout" component={Signout}/>
               <AdminProtectedRoute path="/addvendor" component={AddVendorAdmin}/>
               <Route component={NotFound}/>
             </Switch>
@@ -48,16 +49,16 @@ class App extends React.Component {
  * @param {any} { component: Component, ...rest }
  */
 const ProtectedRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) => {
-      const isLogged = Meteor.userId() !== null;
-      return isLogged ?
-          (<Component {...props} />) :
-          (<Redirect to={{ pathname: '/signin', state: { from: props.location } }}/>
-      );
-    }}
-  />
+    <Route
+        {...rest}
+        render={(props) => {
+          const isLogged = Meteor.userId() !== null;
+          return isLogged ?
+              (<Component {...props} />) :
+              (<Redirect to={{ pathname: '/signin', state: { from: props.location } }}/>
+              );
+        }}
+    />
 );
 
 /**
