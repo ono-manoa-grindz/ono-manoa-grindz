@@ -34,7 +34,7 @@ class Vendor extends React.Component {
     return (
         <Card centered>
           <Link to={`/moreinfo/${this.props.vendor._id}`}>
-            <Image centered size='small' src={this.props.vendor.image}></Image>
+            <Image centered src={this.props.vendor.image}></Image>
           </Link>
           <Card.Content>
             <Card.Header>

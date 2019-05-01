@@ -9,8 +9,9 @@ const Vendors = new Mongo.Collection('Vendors');
 const VendorSchema = new SimpleSchema({
   vendorName: String,
   shortDescription: String,
-  description: String,
+  fullDescription: String,
   location: String,
+  locationImage: String,
   image: String,
   hours: String,
   menu: String,

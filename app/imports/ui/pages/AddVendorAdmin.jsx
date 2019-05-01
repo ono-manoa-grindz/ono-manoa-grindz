@@ -33,9 +33,11 @@ class AddVendorAdmin extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { vendorName, description, image, hours, location, menu, rating } = data;
+    const { vendorName, shortDescription, fullDescription, image, locationImage, hours, location, menu, rating } = data;
     const owner = Meteor.user().username;
-    Vendors.insert({ vendorName, description, image, hours, location, menu, rating, owner }, this.insertCallback);
+    Vendors.insert({ vendorName, shortDescription, fullDescription, image, locationImage,
+          hours, location, menu, rating, owner },
+        this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -50,11 +52,13 @@ class AddVendorAdmin extends React.Component {
               <Segment>
                 <TextField name='vendorName'/>
                 <LongTextField name='shortDescription'/>
-                <LongTextField name='description'/>
+                <LongTextField name='fullDescription'/>
                 <TextField name='image'/>
                 <TextField name='hours'/>
                 <TextField name='location'/>
+                <TextField name='locationImage'/>
                 <TextField name='menu'/>
+                <TextField name='rating'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>

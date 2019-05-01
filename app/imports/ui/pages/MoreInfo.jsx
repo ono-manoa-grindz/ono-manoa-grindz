@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Image, Loader, Header, Divider, Grid, List } from 'semantic-ui-react';
-import { Vendors, VendorSchema } from '/imports/api/vendor/vendor';
+import { Vendors } from '/imports/api/vendor/vendor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -17,37 +17,39 @@ class MoreInfo extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Image size='medium' src={this.props.vendor.image}
-                 centered/>
-          <Grid columns={2}>
+          <Image src={this.props.vendor.image} centered/>
+          <Divider/>
+          <Grid columns={3}>
             <Grid.Column>
-              <Image size='small' src={'http://manoa.hawaii.edu/food/daSpot_files/stacks_image_1850.png'}
-                     floated='right'/>
+              <Image floated='right' centered src={this.props.vendor.locationImage}/>
             </Grid.Column>
             <Grid.Column>
-              <Image size='small' src={'http://manoa.hawaii.edu/food/daSpot_files/stacks_image_1853.png'}/>
+              <Container text>
+                <Header as='h4' textAlign='center'>{this.props.vendor.location}</Header>
+                {this.props.vendor.fullDescription}
+              </Container>
             </Grid.Column>
           </Grid>
-          <Divider></Divider>
-          <Container text>
-            <Header as='h4'>{this.props.vendor.location}</Header>
-            {this.props.vendor.description}
-          </Container>
-          <Divider></Divider>
+          <Divider/>
+          <Grid centered>
+            <List>
+              <List.Item><Header as='h4'>Menu</Header></List.Item>
+            </List>
+          </Grid>
+          <Divider/>
           <Grid centered>
             <List>
               <List.Item><Header as='h4'>Review Section</Header></List.Item>
             </List>
           </Grid>
-          <Divider></Divider>
+          <Divider/>
           <Grid centered>
             <List>
               <List.Item><Header as='h4'>Operating Hours:</Header></List.Item>
-              <List.Item>Monday - Friday</List.Item>
-              <List.Item>10:00 am - 2:00 pm</List.Item>
+              {this.props.vendor.hours}
             </List>
           </Grid>
-          <Divider></Divider>
+          <Divider/>
         </Container>
     );
   }

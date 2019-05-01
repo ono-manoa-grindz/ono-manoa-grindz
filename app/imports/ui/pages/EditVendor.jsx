@@ -17,8 +17,10 @@ class EditVendor extends React.Component {
 
   /** On successful submit, insert the data. */
   submit(data) {
-    const { vendorName, description, image, hours, location, menu, _id } = data;
-    Vendors.update(_id, { $set: { vendorName, description, image, hours, location, menu } }, (error) => (error ?
+    const { vendorName, shortDescription, fullDescription, image, locationImage, hours, location, menu, _id } = data;
+    Vendors.update(_id, { $set: { vendorName, shortDescription, fullDescription, image,
+            locationImage, hours, location, menu, } },
+        (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
@@ -38,10 +40,11 @@ class EditVendor extends React.Component {
               <Segment>
                 <TextField name='vendorName'/>
                 <LongTextField name='shortDescription'/>
-                <LongTextField name='description'/>
+                <LongTextField name='fullDescription'/>
                 <TextField name='image'/>
                 <TextField name='hours'/>
                 <TextField name='location'/>
+                <TextField name='locationImage'/>
                 <TextField name='menu'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
