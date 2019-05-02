@@ -18,10 +18,10 @@ if (Vendors.find().count() === 0) {
 
 /** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('Vendors', function publish() {
-  if (this.userId) {
+ if (this.userId) {
     return Vendors.find();
-  }
-  return this.ready();
+    }
+ return this.ready();
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
