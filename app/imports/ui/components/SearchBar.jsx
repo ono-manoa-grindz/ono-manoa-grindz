@@ -37,11 +37,6 @@ class SearchBar extends React.Component {
       });
     }, 300);
   }
-  //
-  // onClick() {
-  //   const result =
-  //     return result;
-  // }
 
   /** Render the search bar. Use Search: https://react.semantic-ui.com/modules/search/ */
   render() {
