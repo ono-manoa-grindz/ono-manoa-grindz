@@ -4,6 +4,7 @@ import { Container, Image, Loader, Header, Divider, Grid, List } from 'semantic-
 import { Vendors } from '/imports/api/vendor/vendor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import AddReview from '../components/AddReview'
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class MoreInfo extends React.Component {
@@ -50,6 +51,8 @@ class MoreInfo extends React.Component {
             </List>
           </Grid>
           <Divider/>
+          <h3>Add review</h3>
+          <AddReview vendor={this.props.vendor}/>
         </Container>
     );
   }

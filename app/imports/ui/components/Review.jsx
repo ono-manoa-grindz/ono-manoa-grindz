@@ -2,6 +2,7 @@ import React from 'react';
 import { Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Reviews } from '/imports/api/review/review';
 
 class Review extends React.Component {
   render() {
@@ -9,11 +10,10 @@ class Review extends React.Component {
     return (
         <Feed.Event style={feedstyle}>
           <Feed.Content>
-            <Feed.Date content={this.props.feedback.createdAt.toLocaleDateString('en-US')} />
             <Feed.Summary>
-              {this.props.feedback.rating}
+              {this.props.review.rating}
               <br/>
-              {this.props.feedback.feedback}
+              {this.props.review.review}
             </Feed.Summary>
           </Feed.Content>
         </Feed.Event>
@@ -23,8 +23,8 @@ class Review extends React.Component {
 
 /** Require a document to be passed to this component. */
 Review.propTypes = {
-  feedback: PropTypes.object.isRequired,
+  review: PropTypes.object.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
-export default withRouter(Review);
+export default withRouter(Reviews);

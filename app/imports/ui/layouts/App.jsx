@@ -10,7 +10,7 @@ import Landing from '../pages/Landing';
 import ListVendors from '../pages/ListVendors';
 import EditVendor from '../pages/EditVendor';
 import MoreInfo from '../pages/MoreInfo';
-import AddReview from '../pages/AddReview';
+import AddReview from '../components/AddReview';
 import AddVendorAdmin from '../pages/AddVendorAdmin';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';

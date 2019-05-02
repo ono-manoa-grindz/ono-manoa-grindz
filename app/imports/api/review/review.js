@@ -8,16 +8,15 @@ const Reviews = new Mongo.Collection('Reviews');
 
 /** Create a schema to constrain the structure of documents associated with this collection. */
 const ReviewSchema = new SimpleSchema({
-  description: String,
-  name: String,
+  vendorName: String,
+  review: String,
   owner: String,
   rating: {
     type: String,
-    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★'],
-    defaultValue: '★',
+    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★', ' '],
+    defaultValue: ' ',
   },
-  createdAt: Date,
-  image: String,
+  createdAt: String,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
