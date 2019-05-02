@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Image, Loader, Header, Divider, Grid, List } from 'semantic-ui-react';
 import { Vendors } from '/imports/api/vendor/vendor';
 import { Reviews } from '/imports/api/review/review';
+import Review from '/imports/ui/components/Review';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import AddReview from '../components/AddReview';
@@ -41,6 +42,8 @@ class MoreInfo extends React.Component {
           <Grid centered>
             <List>
               <List.Item><Header as='h4'>Review Section</Header></List.Item>
+              {this.props.review.map((review, index) => <Review key={index}
+                                                                review={review}/>)}
             </List>
           </Grid>
           <Divider/>
@@ -62,7 +65,7 @@ class MoreInfo extends React.Component {
 MoreInfo.propTypes = {
   vendor: PropTypes.object,
   model: PropTypes.object,
-  review: PropTypes.object,
+  review: PropTypes.array,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -75,7 +78,7 @@ export default withTracker(({ match }) => {
   const subscription2 = Meteor.subscribe('Reviews');
   return {
     vendor: Vendors.findOne(documentId),
-    review: Reviews.find({}).fetch(),
+    review: Reviews.find().fetch(),
     ready: subscription.ready() && subscription2.ready(),
   };
 })(MoreInfo);
