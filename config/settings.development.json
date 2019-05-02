@@ -212,5 +212,28 @@
       "owner": "admin@foo.com",
       "rating": "★★★★"
     }
+  ],
+  "defaultReviews": [
+    {
+      "vendorName": "Dunkin Donuts",
+      "review": "Best place for a quick donut and coffee",
+      "owner": "john@foo.com",
+      "rating": "★★★★",
+      "createdAt": "Wed May 01 2019 20:19:56 GMT-1000 (Hawaii-Aleutian Standard Time)"
+    },
+    {
+      "vendorName": "L&L Hawaiian Barbecue",
+      "review": "Great portions for the price and tastes great!",
+      "owner": "john@foo.com",
+      "rating": "★★★★★",
+      "createdAt": "Wed May 01 2019 20:14:56 GMT-1000 (Hawaii-Aleutian Standard Time)"
+    },
+    {
+      "vendorName": "Da Spot",
+      "review": "Hooooo broke da mouth so good",
+      "owner": "john@foo.com",
+      "rating": "★★★★★",
+      "createdAt": "Wed May 01 2019 20:14:56 GMT-1000 (Hawaii-Aleutian Standard Time)"
+    }
   ]
 }
