@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Vendors } from '/imports/api/vendor/vendor';
 import { Meteor } from 'meteor/meteor';
+import { Link } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   componentWillMount() {
@@ -31,6 +32,13 @@ class SearchBar extends React.Component {
     }, 300);
   }
 
+  onClick() {
+    const result = 
+      return result;
+  }
+
+
+
   render() {
     const { isLoading, value, results } = this.state;
     return (
@@ -53,6 +61,7 @@ class SearchBar extends React.Component {
 SearchBar.propTypes = {
   vendors: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
+  vendor: PropTypes.object.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
