@@ -18,12 +18,12 @@
       "location": "Sustainability Courtyard & Saunders Hall (2 locations)",
       "locationImage": [
         "http://manoa.hawaii.edu/food/daSpot_files/stacks_image_1850.png",
-        "http://manoa.hawaii.edu/food/daSpot_files/stacks_image_1850.png"
+        "http://manoa.hawaii.edu/food/daSpot_files/stacks_image_1853.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_22.png",
       "hours": "Monday - Friday 10:00am - 2:00pm",
       "menu": "Menu",
-      "owner": "john@foo.com",
+      "owner": "j ohn@foo.com",
       "rating": "★★★★"
     },
     {
@@ -32,7 +32,6 @@
       "fullDescription": "Dunkin’ Donuts in Paradise Palms Cafe will keep Hawaii running with high-quality beverage offerings–including freshly-brewed Hot and Iced Coffees–paired perfectly with delicious donuts, bakery good, sandwiches and more.",
       "location": "Paradise Palms Café",
       "locationImage": [
-        "http://manoa.hawaii.edu/food/dunkindonuts_files/stacks_image_27.png",
         "http://manoa.hawaii.edu/food/dunkindonuts_files/stacks_image_27.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_57.png",
@@ -48,7 +47,6 @@
       "location": "Sustainability Courtyard & Saunders Hall (2 locations)",
       "locationImage": [
         "http://manoa.hawaii.edu/food/govindas_files/stacks_image_27.png",
-        "http://manoa.hawaii.edu/food/govindas_files/stacks_image_27.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_2004.png",
       "hours": "Monday - Friday 10:00am - 2:00pm",
@@ -62,7 +60,6 @@
       "fullDescription": "Holoholo Grill features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or ",
       "location": "Paradise Palms Café",
       "locationImage": [
-        "http://manoa.hawaii.edu/food/holoholo_files/stacks_image_27.png",
         "http://manoa.hawaii.edu/food/holoholo_files/stacks_image_27.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_639.png",
@@ -91,7 +88,8 @@
       "fullDescription": "Kamitoku Ramen specializes in a Tottori-style beef bone ramen.",
       "location": "Center for Korean Studies (Monday, Wednesday, Friday), Holmes Hall (Tuesday, Thursday)",
       "locationImage": [
-        "http://manoa.hawaii.edu/food/kamitoku_files/stacks_image_51.png"
+        "http://manoa.hawaii.edu/food/kamitoku_files/stacks_image_51.png",
+        "http://manoa.hawaii.edu/food/kamitoku_files/stacks_image_34.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_1880.png",
       "hours": "Monday, Wednesday, Friday: 10:00am - 2:00pm (Center for Korean Studies), Tuesday, Thursday: 10:00am - 2:00pm (Holmes Hall)",
@@ -105,7 +103,8 @@
       "fullDescription": "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L's famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available.",
       "location": "Athletic Complex, 2nd Floor & Paradise Palms Café (Two locations)",
       "locationImage": [
-        "http://manoa.hawaii.edu/food/LandL_files/stacks_image_656.png"
+        "http://manoa.hawaii.edu/food/LandL_files/stacks_image_656.png",
+        "http://manoa.hawaii.edu/food/LandL_files/stacks_image_659.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_75.png",
       "hours": "Monday - Friday 7:00am - 4:30pm",
@@ -133,7 +132,8 @@
       "fullDescription": "Le Crêpe Café makes traditional French crêpes, cooked to order in front of customers. They specialize in a flavorsome menu of sweet and savory crêpes and use fresh ingredients, organic when possible. Their utensils are even bio-compostable. Enjoy a crêpe any time of day, as a breakfast, snack, main course, or dessert - close your eyes and you're in Paris! Whether you’re needing a break from the law books or a pick-me-up as you’re headed to or off campus, you’ll also appreciate Le Crêpe Café’s French Roast and espresso drinks. ",
       "location": "Richardson School of Law & Paradise Palms Café (2 locations)",
       "locationImage": [
-        "http://manoa.hawaii.edu/food/leCrepe_files/stacks_image_2224.png"
+        "http://manoa.hawaii.edu/food/leCrepe_files/stacks_image_2224.png",
+        "http://manoa.hawaii.edu/food/leCrepe_files/stacks_image_2227.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_266.png",
       "hours": "Monday - Thursday: 8:00am - 5:30pm, Friday: 8:00am - 2:00pm (Law School), Monday - Friday: 8:00am - 5:00pm (Paradise Palms Café)",
@@ -189,7 +189,8 @@
       "fullDescription": "Sistah Truck serves Korean-inspired local cuisine. Daily menu plate lunches include loco moco, chicken katsu, and Korean-style shoyu chicken. They also serve grab-and-go dishes like bibimbap, gyoza and kimchi bowls. Vegetarian options are available.",
       "location": "Holmes Hall (Monday, Wednesday, Friday), Center for Korean Studies (Tuesday, Thursday)",
       "locationImage": [
-        "http://manoa.hawaii.edu/food/sistahTruck_files/stacks_image_1318.png"
+        "http://manoa.hawaii.edu/food/sistahTruck_files/stacks_image_1318.png",
+        "http://manoa.hawaii.edu/food/sistahTruck_files/stacks_image_1321.png"
       ],
       "image": "http://manoa.hawaii.edu/food/index_files/stacks_image_1956.png",
       "hours": "Monday, Wednesday, Friday: 10:00am - 2:00pm (Holmes Hall), Tuesday, Thursday: 10:00am - 2:00pm (Center for Korean Studies)",
