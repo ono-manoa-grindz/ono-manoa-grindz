@@ -11,7 +11,7 @@ const resultRenderer = ({ vendorName }) => <Label content={vendorName}/>
 
 resultRenderer.propTypes = {
   vendorName: PropTypes.string,
-}
+};
 
 class SearchBar extends React.Component {
   componentWillMount() {
