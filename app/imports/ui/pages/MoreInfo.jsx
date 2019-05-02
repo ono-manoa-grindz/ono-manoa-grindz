@@ -2,8 +2,10 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Image, Loader, Header, Divider, Grid, List } from 'semantic-ui-react';
 import { Vendors } from '/imports/api/vendor/vendor';
+import { Reviews } from '/imports/api/review/review';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import AddReview from '../components/AddReview';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class MoreInfo extends React.Component {
@@ -19,10 +21,9 @@ class MoreInfo extends React.Component {
         <Container>
           <Image src={this.props.vendor.image} centered/>
           <Divider/>
-          <Grid columns={3}>
-            <Grid.Column>
-              <Image floated='right' centered src={this.props.vendor.locationImage}/>
-            </Grid.Column>
+          <Grid columns={3 + this.props.vendor.locationImage.length}>
+            {this.props.vendor.locationImage.map((image, index) => <Grid.Column><Image centered src={image}
+                                                                                       key={index}/></Grid.Column>)}
             <Grid.Column>
               <Container text>
                 <Header as='h4' textAlign='center'>{this.props.vendor.location}</Header>
@@ -50,6 +51,8 @@ class MoreInfo extends React.Component {
             </List>
           </Grid>
           <Divider/>
+          <h3>Add review</h3>
+          <AddReview vendor={this.props.vendor}/>
         </Container>
     );
   }
@@ -59,6 +62,7 @@ class MoreInfo extends React.Component {
 MoreInfo.propTypes = {
   vendor: PropTypes.object,
   model: PropTypes.object,
+  review: PropTypes.object,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -68,8 +72,10 @@ export default withTracker(({ match }) => {
   const documentId = match.params._id;
   // Get access to Vendor documents.
   const subscription = Meteor.subscribe('Vendors');
+  const subscription2 = Meteor.subscribe('Reviews');
   return {
     vendor: Vendors.findOne(documentId),
-    ready: subscription.ready(),
+    review: Reviews.find({}).fetch(),
+    ready: subscription.ready() && subscription2.ready(),
   };
 })(MoreInfo);
