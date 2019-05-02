@@ -5,6 +5,7 @@ import { Vendors } from '/imports/api/vendor/vendor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Vendor from '/imports/ui/components/Vendor';
+import SearchBar from '/imports/ui/components/SearchBar';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListVendors extends React.Component {
@@ -20,6 +21,7 @@ class ListVendors extends React.Component {
     return (
         <Container style={divStyle}>
           <Header as="h2" textAlign="center">Vendors</Header>
+          <SearchBar/>
           <Card.Group>
             {this.props.vendors.map((vendor, index) => <Vendor key={index} vendor={vendor}/>)}
           </Card.Group>
