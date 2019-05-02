@@ -18,8 +18,8 @@ const VendorSchema = new SimpleSchema({
   owner: String,
   rating: {
     type: String,
-    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★', ' '],
-    defaultValue: ' ',
+    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★'],
+    defaultValue: '★★★',
   },
 }, { tracker: Tracker });
 

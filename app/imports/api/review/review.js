@@ -13,8 +13,8 @@ const ReviewSchema = new SimpleSchema({
   owner: String,
   rating: {
     type: String,
-    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★', ' '],
-    defaultValue: ' ',
+    allowedValues: ['★', '★★', '★★★', '★★★★', '★★★★★'],
+    defaultValue: '★★★',
   },
   createdAt: String,
 }, { tracker: Tracker });
