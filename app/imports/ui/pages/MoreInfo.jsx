@@ -19,10 +19,9 @@ class MoreInfo extends React.Component {
         <Container>
           <Image src={this.props.vendor.image} centered/>
           <Divider/>
-          <Grid columns={3}>
-            <Grid.Column>
-              <Image floated='right' centered src={this.props.vendor.locationImage}/>
-            </Grid.Column>
+          <Grid columns={3 + this.props.vendor.locationImage.length}>
+            {this.props.vendor.locationImage.map((image, index) => <Grid.Column><Image centered src={image}
+                                                                                       key={index}/></Grid.Column>)}
             <Grid.Column>
               <Container text>
                 <Header as='h4' textAlign='center'>{this.props.vendor.location}</Header>
