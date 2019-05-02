@@ -1,11 +1,12 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Image, Loader, Header, Divider, Grid, List } from 'semantic-ui-react';
+import { Container, Image, Loader, Header, Divider, Grid, List, Comment } from 'semantic-ui-react';
 import { Vendors } from '/imports/api/vendor/vendor';
 import { Reviews } from '/imports/api/review/review';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import AddReview from '../components/AddReview';
+import Review from '../components/Review';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class MoreInfo extends React.Component {
@@ -17,6 +18,7 @@ class MoreInfo extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
+    const reviews = this.props.reviews.filter(review => review.vendorName === this.props.vendor.vendorName);
     return (
         <Container>
           <Image src={this.props.vendor.image} centered/>
@@ -40,12 +42,6 @@ class MoreInfo extends React.Component {
           <Divider/>
           <Grid centered>
             <List>
-              <List.Item><Header as='h4'>Review Section</Header></List.Item>
-            </List>
-          </Grid>
-          <Divider/>
-          <Grid centered>
-            <List>
               <List.Item><Header as='h4'>Operating Hours:</Header></List.Item>
               {this.props.vendor.hours}
             </List>
@@ -53,6 +49,15 @@ class MoreInfo extends React.Component {
           <Divider/>
           <h3>Add review</h3>
           <AddReview vendor={this.props.vendor}/>
+          <Divider/>
+          <h3>All reviews</h3>
+          <Grid>
+            <Comment.Group>
+              {
+                // reviews.map((review, index) => <Review key={index} review={review}/>)
+              }
+            </Comment.Group>
+          </Grid>
         </Container>
     );
   }
@@ -62,7 +67,7 @@ class MoreInfo extends React.Component {
 MoreInfo.propTypes = {
   vendor: PropTypes.object,
   model: PropTypes.object,
-  review: PropTypes.object,
+  reviews: PropTypes.object,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -75,7 +80,7 @@ export default withTracker(({ match }) => {
   const subscription2 = Meteor.subscribe('Reviews');
   return {
     vendor: Vendors.findOne(documentId),
-    review: Reviews.find({}).fetch(),
+    reviews: Reviews.find({}).fetch(),
     ready: subscription.ready() && subscription2.ready(),
   };
 })(MoreInfo);
