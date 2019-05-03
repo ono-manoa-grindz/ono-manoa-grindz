@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from 'semantic-ui-react';
+import { Comment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -8,12 +8,12 @@ class Review extends React.Component {
     return (
         <Comment>
           <Comment.Content>
-            <Comment.Author as='a'>this.props.review.owner</Comment.Author>
+            <Comment.Author as='a'>{this.props.review.owner}</Comment.Author>
             <Comment.Metadata>
-              <div>this.props.review.createdAt</div>
-              <div>this.props.review.rating</div>
+              <div>{this.props.review.createdAt}</div>
+              <div>{this.props.review.rating}</div>
             </Comment.Metadata>
-            <Comment.Text>this.props.review.review</Comment.Text>
+            <Comment.Text>{this.props.review.review}</Comment.Text>
           </Comment.Content>
         </Comment>
     );

@@ -32,7 +32,7 @@ class ListVendors extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 ListVendors.propTypes = {
-  vendors: PropTypes.object.isRequired,
+  vendors: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
