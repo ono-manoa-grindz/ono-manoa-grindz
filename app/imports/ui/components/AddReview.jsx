@@ -48,7 +48,7 @@ class AddReview extends React.Component {
             <SelectField name='rating'/>
             <SubmitField value='Submit'/>
             <ErrorsField/>
-            <HiddenField name='createdAt' value={ Date().toLocaleString() }/>
+            <HiddenField name='createdAt' value={ new Date().toLocaleString() }/>
             <HiddenField name='vendorName' value={this.props.vendor.vendorName}/>
             <HiddenField name='owner' value='fakeuser@foo.com'/>
           </Segment>
