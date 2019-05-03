@@ -23,7 +23,7 @@ class MoreInfo extends React.Component {
         <Container>
           <Image src={this.props.vendor.image} centered/>
           <Divider/>
-          <Grid columns={3 + this.props.vendor.locationImage.length}>
+          <Grid padded columns={3 + this.props.vendor.locationImage.length}>
             {this.props.vendor.locationImage.map((image, index) => <Grid.Column><Image centered src={image}
                                                                                        key={index}/></Grid.Column>)}
             <Grid.Column>
@@ -34,13 +34,14 @@ class MoreInfo extends React.Component {
             </Grid.Column>
           </Grid>
           <Divider/>
-          <Grid centered>
+          <Grid padded centered>
             <List>
               <List.Item><Header as='h4'>Menu</Header></List.Item>
+              {this.props.vendor.menu.map((item) => <List.Item>{item}</List.Item>)}
             </List>
           </Grid>
           <Divider/>
-          <Grid centered>
+          <Grid padded centered>
             <List>
               <List.Item><Header as='h4'>Operating Hours:</Header></List.Item>
               {this.props.vendor.hours}
