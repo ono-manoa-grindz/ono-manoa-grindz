@@ -14,7 +14,7 @@ const VendorSchema = new SimpleSchema({
   locationImage: [String],
   image: String,
   hours: String,
-  menu: String,
+  menu: [String],
   owner: String,
   rating: {
     type: String,
