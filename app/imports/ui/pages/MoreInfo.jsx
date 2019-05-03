@@ -60,6 +60,7 @@ class MoreInfo extends React.Component {
               }
             </Comment.Group>
           </Grid>
+          <br/>
         </Container>
     );
   }
