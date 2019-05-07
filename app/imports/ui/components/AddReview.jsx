@@ -9,6 +9,7 @@ import ErrorsField from 'uniforms-semantic/ErrorsField';
 import SelectField from 'uniforms-semantic/SelectField';
 import { Bert } from 'meteor/themeteorchef:bert';
 import PropTypes from 'prop-types';
+import { Meteor } from 'meteor/meteor';
 
 /** Renders the Page for adding a document. */
 class AddReview extends React.Component {

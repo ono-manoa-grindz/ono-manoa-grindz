@@ -7,7 +7,7 @@ import { Vendors } from '/imports/api/vendor/vendor';
 import { Meteor } from 'meteor/meteor';
 import { Link } from 'react-router-dom';
 
-const resultRenderer = ({ vendorName }) => <Label content={vendorName}/>
+const resultRenderer = ({ vendorName }) => <Label content={vendorName}/>;
 
 resultRenderer.propTypes = {
   vendorName: PropTypes.string,
@@ -25,6 +25,7 @@ class SearchBar extends React.Component {
   handleSearchChange = (e, { value }) => {
     this.setState({ isLoading: true, value });
 
+/*eslint-disable */
     setTimeout(() => {
       if (this.state.value.length < 1) return this.resetComponent();
 
@@ -41,6 +42,7 @@ class SearchBar extends React.Component {
   /** Render the search bar. Use Search: https://react.semantic-ui.com/modules/search/ */
   render() {
     const { isLoading, value, results, _id } = this.state;
+    /* eslint-enable */
     return (
         <Grid>
           <Grid.Column width={8}>

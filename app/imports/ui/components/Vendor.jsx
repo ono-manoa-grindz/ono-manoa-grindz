@@ -7,6 +7,7 @@ import { Meteor } from 'meteor/meteor';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Vendors } from '/imports/api/vendor/vendor';
 
+
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Vendor extends React.Component {
   constructor(props) {
@@ -15,7 +16,9 @@ class Vendor extends React.Component {
   }
 
   onClick() {
+    /*eslint-disable */
     const result = window.confirm('Do you really want to delete?');
+    /* eslint-enable */
     if (result) {
       Vendors.remove(this.props.vendor._id, this.deleteCallback);
     }

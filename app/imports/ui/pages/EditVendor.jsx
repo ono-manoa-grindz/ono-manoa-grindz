@@ -19,7 +19,7 @@ class EditVendor extends React.Component {
   submit(data) {
     const { vendorName, shortDescription, fullDescription, image, locationImage, hours, location, menu, _id } = data;
     Vendors.update(_id, { $set: { vendorName, shortDescription, fullDescription, image,
-            locationImage, hours, location, menu, } },
+            locationImage, hours, location, menu } },
         (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));

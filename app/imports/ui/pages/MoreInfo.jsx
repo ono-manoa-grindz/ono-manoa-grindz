@@ -20,6 +20,7 @@ class MoreInfo extends React.Component {
   renderPage() {
     const vendorReview = this.props.reviews.filter(review => review.vendorName === this.props.vendor.vendorName);
     return (
+        /*eslint-disable */
         <Container>
           <Image src={this.props.vendor.image} centered/>
           <Divider/>
@@ -38,6 +39,7 @@ class MoreInfo extends React.Component {
             <List>
               <List.Item><Header as='h4'>Menu</Header></List.Item>
               {this.props.vendor.menu.map((item) => <List.Item>{item}</List.Item>)}
+              /* eslint-enable */
             </List>
           </Grid>
           <Divider/>
