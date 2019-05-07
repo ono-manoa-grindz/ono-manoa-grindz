@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Card, Button } from 'semantic-ui-react';
+import { Grid, Image, Card } from 'semantic-ui-react';
 
 
 /** A simple static component to render some text for the landing page. */
