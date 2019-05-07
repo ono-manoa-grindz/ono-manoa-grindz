@@ -31,13 +31,6 @@ class ListVendors extends React.Component {
   }
 }
 
-const allReviews = this.props.reviews.vendorName.rating;
-function averageRatings(allReviews) {
-  return _.reduce(allReviews, function(memo, num.length){ return memo + num.length; }, 0);
-
-}
-
-
 /** Require an array of Stuff documents in the props. */
 ListVendors.propTypes = {
   vendors: PropTypes.array.isRequired,
