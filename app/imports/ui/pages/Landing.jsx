@@ -31,11 +31,6 @@ class Landing extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui buttons'>
-                    <Button basic color='green'>
-                      View
-                    </Button>
-                  </div>
                 </Card.Content>
               </Card>
             </Grid.Column>
@@ -50,11 +45,6 @@ class Landing extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui buttons'>
-                    <Button basic color='green'>
-                      View
-                    </Button>
-                  </div>
                 </Card.Content>
               </Card>
             </Grid.Column>
@@ -69,11 +59,6 @@ class Landing extends React.Component {
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  <div className='ui buttons'>
-                    <Button basic color='green'>
-                      View
-                    </Button>
-                  </div>
                 </Card.Content>
               </Card>
             </Grid.Column>
